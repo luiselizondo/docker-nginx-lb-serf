@@ -22,7 +22,7 @@ I'm using fig to start the container, this is the important part:
 	  expose:
 	   - "3000"
 	  volumes:
-	   - "/var/www/elipse:/var/www"
+	   - "/var/www:/var/www"
 	   - "/var/log/docker:/var/log/supervisor"
 	   - "/var/files:/var/files"
 	  environment:
