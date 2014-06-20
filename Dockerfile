@@ -15,7 +15,6 @@ RUN apt-get autoremove -y
 
 # Copy supervisor configuration
 ADD ./config/nginx.conf /etc/nginx/nginx.conf
-ADD ./config/nginx.conf /etc/nginx/nginx-original.conf
 ADD ./config/supervisord.conf /etc/supervisor/conf.d/supervisord-nginx-serf.conf
 
 # Copy scripts
