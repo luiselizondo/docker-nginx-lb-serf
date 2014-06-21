@@ -10,7 +10,7 @@ while read line; do
     fi
 
     SERVER=`echo $line | awk '{printf "server %s:3000;", $2}'`
-    sed -i "/upstream/a\    $SERVER" /etc/nginx/nginx.conf
+    sed -i "/upstream/a\  $SERVER" /etc/nginx/sites-enabled/default.conf
     echo $SERVER >> /var/log/supervisor/nginx-available-servers.txt
 done
 
