@@ -42,4 +42,4 @@ I'm using fig to start the container, this is the important part:
 
 As you can see, both my load balancer and web application links to the serf container. I'm also mounting the same volumes for both my web container and the lb container. Finally, the web container will be built using a Dockerfile that I'm including in my application.
 
-Note: You can mount /etc/nginx/sites-enabled and include a default configuration, I'm adding in config/default-example.conf the file I'm using but you can change it if you want to. This fill will be added to the container in case you don't mount the directory. *The file MUST be named "default.conf" so the scripts can add new containers as soon as serf detects them*
+Note: You can mount /etc/nginx/sites-enabled and include a default configuration, I'm adding in config/default-example.conf the file I'm using but you can change it if you want to. This fill will be added to the container in case you don't mount the directory. *The file MUST be named "default" so the scripts can add new containers as soon as serf detects them*
